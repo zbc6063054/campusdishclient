@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.android.campusdishclient"
+    android:versionCode="2"
+    android:versionName="1.1.0" >
+
+    <uses-sdk android:minSdkVersion="4" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:icon="@drawable/icon"
+        android:label="@string/app_name" >
+        <activity
+            android:label="@string/app_name"
+            android:name=".CampusdishclientActivity" >
+            
+        </activity>
+        <activity android:name="LoginActivity" android:label="@string/login"></activity>
+        <activity android:name="DishDetailActivity" android:label="@string/Dish_detail"></activity>
+        <activity android:name="ShowCartActivity" android:label="@string/ShowCart"></activity>
+        <activity android:label="dishList" android:name="DishListActivity"></activity>
+        <activity android:label="@string/app_name" android:name="SplashActivity">
+            <intent-filter >
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

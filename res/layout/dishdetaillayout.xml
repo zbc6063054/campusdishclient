@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_bg"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/logo_bg"
+        android:gravity="center" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:shadowColor="#75000000"
+            android:shadowDy="2.0"
+            android:shadowRadius="2.0"
+            android:text="@string/DishDetail_Logo_text"
+            android:textColor="#ffffffff"
+            android:textSize="20.0sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffffff"
+        android:orientation="horizontal"
+        android:padding="5dip" >
+
+        <LinearLayout
+            android:layout_width="160dip"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/DishDetail_text_dishName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/total_black"
+                android:textSize="20dip" />
+
+            <TextView
+                android:id="@+id/DishDetail_text_dishPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/deep_red" />
+
+            <Button
+                android:id="@+id/DishDetail_button_addToCart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dip"
+                android:text="@string/DishDetail_button" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/DishDetail_image_mainImage"
+            android:layout_width="100dip"
+            android:layout_height="100dip"
+            android:layout_gravity="right"
+            android:background="@drawable/showdishdetail_image_shape"
+            android:contentDescription="@string/DishDetail_ImageDescription"
+            android:padding="6dip"
+            android:scaleType="fitXY" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="3dip"
+        android:background="#55555555" >
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dip"
+        android:scrollbars="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/list_shape_bg"
+                android:orientation="vertical"
+                android:padding="8.0dip" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/MainList_Text_Info"
+                    android:textColor="#ffFF0000"
+                    android:textSize="18dip" />
+
+                <TextView
+                    android:id="@+id/DishDetail_text_dishDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginTop="8dip" 
+                    android:textColor="@color/total_black"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/list_shape_bg"
+                android:orientation="vertical"
+                android:layout_marginTop="10dip"
+                android:padding="8.0dip" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/DishDetail_text_dishComment_info"
+                    android:textColor="#ffFF0000"
+                    android:textSize="18dip" />
+                <HorizontalScrollView android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10dip"
+                    android:scrollbarStyle="outsideOverlay"
+                    > 
+				<RatingBar 
+				    android:id="@+id/DishDetail_RatingBar_Grade"
+				    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+      
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dip"
+                    android:layout_marginBottom="10dip"/>
+				</HorizontalScrollView>
+                <TextView
+                    android:id="@+id/DishDetail_text_dishComment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginTop="8dip"
+                    android:textColor="@color/total_black" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

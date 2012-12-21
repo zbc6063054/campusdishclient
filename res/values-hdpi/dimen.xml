@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="main_radio_fontsize">19dip</dimen>
+    <dimen name="main_radio_padding_top">5dip</dimen>
+    <dimen name="main_radio_padding_drawable">2dip</dimen>
+    
+</resources>
